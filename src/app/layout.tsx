@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.className} flex flex-col gap-5 justify-center items-center pr-5 pl-5 md:pr-20 md:pl-20 lg:pr-44 lg:pl-44 xl:pr-80 xl:pl-80`}
+        className={`${raleway.className} flex flex-col gap-5 justify-center items-center p-5 sm:pr-20 sm:pl-20 lg:pr-44 lg:pl-44 xl:pr-80 xl:pl-80`}
       >
         <Nav />
         {children}

@@ -10,7 +10,7 @@ type SectionLayoutProps = {
 const SectionLayoutOfHomePage = (props: SectionLayoutProps) => {
   return (
     <div
-      className="flex flex-col items-start w-full justify-between gap-2 lg:gap-10 mb-40"
+      className="flex flex-col items-start w-full justify-between gap-2 lg:gap-10 mb-20 lg:mb-40"
       id={props.id}
     >
       <header
@@ -21,9 +21,7 @@ const SectionLayoutOfHomePage = (props: SectionLayoutProps) => {
         {props.title}
       </header>
 
-      <div className="flex flex-col-reverse sm:flex-row justify-between gap-10 items-center w-full">
-        {props.children}
-      </div>
+      {props.children}
     </div>
   );
 };

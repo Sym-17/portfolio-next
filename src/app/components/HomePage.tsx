@@ -19,7 +19,7 @@ const HomePage = () => {
             rewarding career in the industry.
           </p>
           <Link href="#about-myself">
-            <h1 className="w-24 p-1 md:w-36 md:p-2 xl:w-40 lg:p-3 xl:p-4 text-white bg-[#536DFE] hover:bg-[#3545a3] text-sm lg:text-xl font-medium text-center rounded-xl cursor-pointer">
+            <h1 className="w-24 p-1 md:w-36 md:p-2 xl:w-40 lg:p-3 xl:p-4 text-white bg-[#536DFE] hover:bg-[#4f62ce] text-sm lg:text-xl font-medium text-center rounded-xl cursor-pointer">
               Get in touch
             </h1>
           </Link>

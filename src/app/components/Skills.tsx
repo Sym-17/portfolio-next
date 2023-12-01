@@ -17,7 +17,7 @@ const Skills = () => {
           width={1}
           height={1}
           alt=""
-          className="w-5/6 sm:w-2/5"
+          className="w-4/6 sm:w-2/5"
         />
         <div className="flex flex-col gap-5 items-end w-full">
           <SkillDetails

@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import LeetcodeIcon from "./LeetcodeIcon";
+import LinkedInIcon from "./LinkedInIcon";
+import GithubIcon from "./GithubIcon";
+import IconShell from "./IconShell";
 
 const HomePage = () => {
   return (
@@ -25,30 +29,18 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="hidden md:flex flex-col gap-5">
-          <Link href={"https://github.com/Sym-17"} target="_blank">
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-              width={1}
-              height={1}
-              alt=""
-              className="w-5 lg:w-12 cursor-pointer lg:p-2 hover:bg-gray-200 hover:rounded-xl"
-            />
-          </Link>
-          <Link
-            href={"https://www.linkedin.com/in/md-samiullah-sayem/"}
-            target="_blank"
-          >
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-              width={1}
-              height={1}
-              alt=""
-              className="w-5 lg:w-12 cursor-pointer lg:p-2 hover:bg-gray-200 hover:rounded-xl"
-            />
-          </Link>
-          <a href="mailto:sayemsami7@gmail.com">
-            <EnvelopeIcon className="w-5 lg:w-12 cursor-pointer lg:p-2 hover:bg-gray-200 hover:rounded-xl" />
-          </a>
+          <IconShell link="https://github.com/Sym-17">
+            <GithubIcon color="#000000" />
+          </IconShell>
+          <IconShell link="https://www.linkedin.com/in/md-samiullah-sayem/">
+            <LinkedInIcon color="#000000" />
+          </IconShell>
+          <IconShell link="https://leetcode.com/sayem7/">
+            <LeetcodeIcon color="#000000" />
+          </IconShell>
+          <IconShell link="mailto:sayemsami7@gmail.com">
+            <EnvelopeIcon />
+          </IconShell>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import LinkedInIcon from "./LinkedInIcon";
 import Image from "next/image";
 import GithubIcon from "./GithubIcon";
 import IconShell from "./IconShell";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export default function Footer() {
   return (
@@ -10,8 +11,8 @@ export default function Footer() {
       <div className="flex-col justify-center gap-0 text-white w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2">
         <div className="flex justify-center items-center gap-2 border-gray-400 border-b-2 w-full">
           <h1 className="text-center text-xs lg:text-sm">Contact Us</h1>
-          <IconShell link="https://github.com/Sym-17">
-            <GithubIcon color="#fff" />
+          <IconShell link="mailto:sayemsami7@gmail.com">
+            <EnvelopeIcon className="text-white" />
           </IconShell>
           <IconShell link="https://www.linkedin.com/in/md-samiullah-sayem/">
             <LinkedInIcon color="#fff" />

@@ -15,8 +15,10 @@ const HomePage = () => {
           <header className="text-2xl md:text-3xl xl:text-5xl font-medium text-[#536DFE]">
             MD. Samiullah Sayem
           </header>
-          <p className="text-lg xl:text-2xl">Software Engineer</p>
-          <p className="text-xs xl:text-base">
+          <p className="text-lg md:text-xl xl:text-2xl font-medium">
+            Software Engineer
+          </p>
+          <p className="text-sm md:text-base xl:text-lg">
             Recent graduate with a strong willingness to learn and to develop
             industry-level skills. I possess a proactive learning attitude and
             aspire to create to a successful career by acquiring valuable
@@ -44,8 +46,13 @@ const HomePage = () => {
           </IconShell>
         </div>
       </div>
-      <Link href="#skills" className="flex items-center ml-auto gap-1">
-        <p className="text-[#536DFE]">Scroll Down</p>
+      <Link
+        href="#skills"
+        className="flex items-center ml-auto gap-1 p-1 rounded-xl"
+      >
+        <p className="text-[#536DFE] text-sm md:text-base xl:text-lg">
+          Scroll Down
+        </p>
         <div className="w-10 h-10 cursor-pointer">
           <MouseIcon color="#536DFE" />
         </div>

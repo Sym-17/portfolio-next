@@ -25,8 +25,8 @@ const Nav = () => {
   const pathname = usePathname();
   return (
     <div className="w-full flex items-center justify-center fixed top-0 bg-white border-b-2">
-      <div className="flex justify-between items-center w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 pt-6 pb-6  border-b-slate-100">
-        <Bars3BottomLeftIcon className="w-8 text-[#536DFE] md:hidden" />
+      <div className="flex justify-between items-center w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 pt-2 pb-2 md:pt-4 md:pb-4 xl:pt-6 xl:pb-6  border-b-slate-100">
+        <Bars3BottomLeftIcon className="w-6 sm:w-8 text-[#536DFE] md:hidden" />
         <div className="hidden md:flex justify-between items-center ml-auto gap-5 xl:gap-10">
           {navTitles.map((title) => {
             return (
@@ -41,8 +41,12 @@ const Nav = () => {
               </Link>
             );
           })}
-          <MoonIcon className="w-5 xl:w-9 p-1 xl:p-2 bg-gray-200 hover:bg-slate-300 rounded-full cursor-pointer" />
+          <MoonIcon className="w-5 xl:w-9 p-1 xl:p-2 bg-gray-100 hover:bg-slate-200 rounded-full cursor-pointer" />
           {/* <SunIcon className="w-9 p-2 bg-gray-200 hover:bg-slate-300 rounded-full cursor-pointer" /> */}
+        </div>
+        <div className="">
+          <MoonIcon className="w-6 sm:w-8 md:hidden p-1 bg-gray-100 hover:bg-slate-200 rounded-full cursor-pointer" />
+          {/* <SunIcon className="w-6 sm:w-8 p-2 bg-gray-200 hover:bg-slate-300 rounded-full cursor-pointer" /> */}
         </div>
       </div>
     </div>

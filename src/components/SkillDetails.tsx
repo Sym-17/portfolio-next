@@ -8,7 +8,7 @@ type SkillDetailsProps = {
 const SkillDetails = (props: SkillDetailsProps) => {
   return (
     <div className="flex flex-col items-end">
-      <header className="text-sm lg:text-lg font-medium uppercase">
+      <header className="text-sm lg:text-xl font-semibold capitalize">
         {props.title}
       </header>
       <ul className="flex gap-2 lg:gap-5">

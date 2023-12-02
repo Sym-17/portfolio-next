@@ -10,7 +10,7 @@ const HomePage = () => {
           <header className="text-2xl md:text-3xl lg:text-5xl font-medium text-[#536DFE]">
             MD. Samiullah Sayem
           </header>
-          <p className="text-lg lg:text-2xl">Web Developer</p>
+          <p className="text-lg lg:text-2xl">Software Engineer</p>
           <p className="text-xs lg:text-base">
             Recent graduate with a strong willingness to learn and to develop
             industry-level skills. I possess a proactive learning attitude and

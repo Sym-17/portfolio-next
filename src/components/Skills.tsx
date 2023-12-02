@@ -1,8 +1,8 @@
 import React from "react";
-import programmingSVG from "../../assests/programming.svg";
+import programmingSVG from "../../public/programming.svg";
 import Image from "next/image";
 import SkillDetails from "./SkillDetails";
-import SectionLayoutOfHomePage from "./SectionLayoutOfHomePage";
+import SectionLayoutOfHomePage from "./SectionShellOfHomePage";
 
 const Skills = () => {
   return (
@@ -26,7 +26,7 @@ const Skills = () => {
           />
           <SkillDetails
             title="frameworks & libraries"
-            items={["React", "Next"]}
+            items={["React JS", "Next JS"]}
           />
           <SkillDetails
             title="software development"
@@ -38,7 +38,7 @@ const Skills = () => {
           />
           <SkillDetails
             title="languages"
-            items={["Bangla (Native)", "English"]}
+            items={["Bangla (Native)", "English (Fluent)"]}
           />
         </div>
       </div>

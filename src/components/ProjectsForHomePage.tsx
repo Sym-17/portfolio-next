@@ -1,7 +1,7 @@
 import React from "react";
-import projectSVG from "../../assests/project-completedsvg.svg";
+import projectSVG from "../../public/project-completedsvg.svg";
 import Image from "next/image";
-import SectionLayoutOfHomePage from "./SectionLayoutOfHomePage";
+import SectionLayoutOfHomePage from "./SectionShellOfHomePage";
 import Link from "next/link";
 import EachProject from "./EachProject";
 import { tree } from "next/dist/build/templates/app-page";

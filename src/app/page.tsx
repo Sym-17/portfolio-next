@@ -5,7 +5,10 @@ import Skills from "../components/Skills";
 
 export default function Home() {
   return (
-    <main className="flex w-full flex-col items-center justify-between">
+    <main
+      className="flex w-full flex-col items-center justify-between"
+      id="home"
+    >
       <HomePage />
       <Skills />
       <ProjectsForHomePage />

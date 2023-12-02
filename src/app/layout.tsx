@@ -16,14 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth scroll-pt-28">
       <body
         className={`${montserrat.className} flex flex-col gap-5 justify-center items-center`}
       >
         <Nav />
-        <div className="pr-5 pl-5 pt-5 sm:pr-20 sm:pl-20 lg:pr-44 lg:pl-44 xl:pr-80 xl:pl-80">
-          {children}
-        </div>
+        {/* pr-5 pl-5 pt-5 sm:pr-20 sm:pl-20 lg:pr-44 lg:pl-44 xl:pr-96 xl:pl-96 */}
+        <div className="w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2">{children}</div>
         <Footer />
       </body>
     </html>

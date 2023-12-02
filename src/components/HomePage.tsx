@@ -5,25 +5,26 @@ import LeetcodeIcon from "./LeetcodeIcon";
 import LinkedInIcon from "./LinkedInIcon";
 import GithubIcon from "./GithubIcon";
 import IconShell from "./IconShell";
+import MouseIcon from "./MouseIcon";
 
 const HomePage = () => {
   return (
-    <div className="w-full min-h-screen flex-1 flex items-center">
-      <div className="flex justify-between">
+    <div className="w-full flex flex-col gap-20 min-h-screen justify-center items-center">
+      <div className="flex justify-between w-full">
         <div className="flex flex-col justify-start gap-2 lg:gap-5 pr-5 md:pr-10 lg:pr-20">
-          <header className="text-2xl md:text-3xl lg:text-5xl font-medium text-[#536DFE]">
+          <header className="text-2xl md:text-3xl xl:text-5xl font-medium text-[#536DFE]">
             MD. Samiullah Sayem
           </header>
-          <p className="text-lg lg:text-2xl">Software Engineer</p>
-          <p className="text-xs lg:text-base">
+          <p className="text-lg xl:text-2xl">Software Engineer</p>
+          <p className="text-xs xl:text-base">
             Recent graduate with a strong willingness to learn and to develop
             industry-level skills. I possess a proactive learning attitude and
             aspire to create to a successful career by acquiring valuable
             experience and professional growth. Committed to building a
             rewarding career in the industry.
           </p>
-          <Link href="#about-myself">
-            <h1 className="w-24 p-1 md:w-36 md:p-2 xl:w-40 lg:p-3 xl:p-4 text-white bg-[#536DFE] hover:bg-[#4f62ce] text-sm lg:text-xl font-medium text-center rounded-xl cursor-pointer">
+          <Link href="#about-myself" className="w-28  md:w-32  xl:w-40">
+            <h1 className=" p-1 md:p-2 lg:p-3 xl:p-4 text-white bg-[#536DFE] hover:bg-[#4f62ce] text-sm  lg:text-base xl:text-lg font-medium text-center rounded-xl cursor-pointer">
               Get in touch
             </h1>
           </Link>
@@ -43,6 +44,12 @@ const HomePage = () => {
           </IconShell>
         </div>
       </div>
+      <Link href="#skills" className="flex items-center ml-auto gap-1">
+        <p className="text-[#536DFE]">Scroll Down</p>
+        <div className="w-10 h-10 cursor-pointer">
+          <MouseIcon color="#536DFE" />
+        </div>
+      </Link>
     </div>
   );
 };

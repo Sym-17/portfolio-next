@@ -14,7 +14,7 @@ type navTitle = {
 };
 
 const navTitles: navTitle[] = [
-  { title: "Home", link: "/" },
+  { title: "Home", link: "/#home" },
   { title: "Skills", link: "/#skills" },
   { title: "Projects", link: "/projects" },
   { title: "Experiences", link: "/#experiences" },
@@ -24,24 +24,26 @@ const navTitles: navTitle[] = [
 const Nav = () => {
   const pathname = usePathname();
   return (
-    <div className="flex justify-between items-center w-full pt-6 pb-6 pr-5 pl-5 sm:pr-20 sm:pl-20 lg:pr-44 lg:pl-44 xl:pr-80 xl:pl-80 fixed top-0 bg-white border-b-2 border-b-slate-100">
-      <Bars3BottomLeftIcon className="w-8 text-[#536DFE] md:hidden" />
-      <div className="hidden md:flex justify-between items-center ml-auto gap-10">
-        {navTitles.map((title) => {
-          return (
-            <Link href={title.link} key={title.title}>
-              <h1
-                className={`cursor-pointer text-base ${
-                  pathname === title.link ? "text-[#536DFE] " : ""
-                } hover:text-[#4f62ce] lg:text-lg font-medium`}
-              >
-                {title.title}
-              </h1>
-            </Link>
-          );
-        })}
-        <MoonIcon className="w-9 p-2 bg-gray-200 hover:bg-slate-300 rounded-full cursor-pointer" />
-        {/* <SunIcon className="w-9 p-2 bg-gray-200 hover:bg-slate-300 rounded-full cursor-pointer" /> */}
+    <div className="w-full flex items-center justify-center fixed top-0 bg-white border-b-2">
+      <div className="flex justify-between items-center w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 pt-6 pb-6  border-b-slate-100">
+        <Bars3BottomLeftIcon className="w-8 text-[#536DFE] md:hidden" />
+        <div className="hidden md:flex justify-between items-center ml-auto gap-5 xl:gap-10">
+          {navTitles.map((title) => {
+            return (
+              <Link href={title.link} key={title.title} scroll={true}>
+                <h1
+                  className={`cursor-pointer  ${
+                    pathname === title.link ? "text-[#536DFE] " : ""
+                  } hover:text-[#4f62ce] text-sm xl:text-lg font-medium`}
+                >
+                  {title.title}
+                </h1>
+              </Link>
+            );
+          })}
+          <MoonIcon className="w-5 xl:w-9 p-1 xl:p-2 bg-gray-200 hover:bg-slate-300 rounded-full cursor-pointer" />
+          {/* <SunIcon className="w-9 p-2 bg-gray-200 hover:bg-slate-300 rounded-full cursor-pointer" /> */}
+        </div>
       </div>
     </div>
   );

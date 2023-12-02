@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import GithubIcon from "./GithubIcon";
 
 type EachProjectProps = {
   title: string;
@@ -36,22 +37,20 @@ const EachProject = (props: EachProjectProps) => {
         <Link
           href={props.gitLink}
           target="_blank"
-          className={`${props.isOngit ? "flex" : "hidden"}`}
+          className={`${
+            props.isOngit ? "flex" : "hidden"
+          } w-5 lg:w-8 cursor-pointer lg:p-1 border-2 border-transparent hover:border-gray-300 rounded-xl`}
         >
-          <Image
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-            width={1}
-            height={1}
-            alt=""
-            className="w-5 lg:w-8 cursor-pointer lg:p-1 hover:bg-gray-200 hover:rounded-full"
-          />
+          <GithubIcon color="#000000" />
         </Link>
         <Link
           href={props.deployLink}
           target="_blank"
-          className={`${props.isDeployed ? "flex" : "hidden"}`}
+          className={`${
+            props.isDeployed ? "flex" : "hidden"
+          } w-5 lg:w-8 cursor-pointer lg:p-1 border-2 border-transparent hover:border-gray-300 rounded-xl`}
         >
-          <GlobeAltIcon className="w-5 lg:w-8 cursor-pointer lg:p-1 hover:bg-gray-200 hover:rounded-full" />
+          <GlobeAltIcon />
         </Link>
       </div>
     </div>

@@ -10,7 +10,7 @@ export default function Home() {
   const { changeMenu } = useSideBar();
   return (
     <main
-      className="flex w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 flex-col items-center justify-between"
+      className="flex w-full flex-col items-center justify-between"
       id="home"
       onClick={() => changeMenu(false)}
     >

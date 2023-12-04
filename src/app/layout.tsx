@@ -25,7 +25,9 @@ export default function RootLayout({
       >
         <Nav />
         {/* pr-5 pl-5 pt-5 sm:pr-20 sm:pl-20 lg:pr-44 lg:pl-44 xl:pr-96 xl:pl-96 */}
-        <div className="flex flex-col items-center w-full">{children}</div>
+        <div className="flex flex-col w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 items-center">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

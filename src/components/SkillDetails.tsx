@@ -11,7 +11,7 @@ const SkillDetails = (props: SkillDetailsProps) => {
       <header className="text-sm lg:text-base xl:text-xl font-semibold capitalize">
         {props.title}
       </header>
-      <ul className="flex gap-2 lg:gap-5">
+      <ul className="flex flex-wrap justify-end gap-2 lg:gap-5">
         {props.items.map((item) => {
           return (
             <li

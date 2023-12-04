@@ -10,7 +10,7 @@ type SectionLayoutProps = {
 const SectionLayoutOfHomePage = (props: SectionLayoutProps) => {
   return (
     <div
-      className="flex flex-col items-start w-full justify-between gap-2 lg:gap-10 mb-20 lg:mb-40 scroll-smooth scroll-pt-44"
+      className="flex flex-col items-start w-full justify-between gap-2 lg:gap-10 mb-20 lg:mb-40"
       id={props.id}
     >
       <header

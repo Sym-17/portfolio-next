@@ -4,7 +4,7 @@ import EachProject from "../../components/EachProject";
 const Projects = () => {
   return (
     <div className="min-h-screen">
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-32 gap-5 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-16 sm:mt-20 md:mt-24 lg:mt-28 gap-5 ">
         <EachProject
           title="Todo"
           description="A notepad app where an user can keep his todos and notes."

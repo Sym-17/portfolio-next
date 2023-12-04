@@ -10,8 +10,8 @@ import MouseIcon from "./MouseIcon";
 const HomePage = () => {
   return (
     <div className="w-full flex flex-col gap-20 min-h-screen justify-center items-center">
-      <div className="flex justify-between w-full">
-        <div className="flex flex-col justify-start gap-2 lg:gap-5 pr-5 md:pr-10 lg:pr-20">
+      <div className="flex justify-between w-full gap-5 md:gap-10 lg:gap-20">
+        <div className="flex flex-col justify-start gap-2 lg:gap-5 ">
           <header className="text-2xl md:text-3xl xl:text-5xl font-medium text-[#536DFE]">
             MD. Samiullah Sayem
           </header>

@@ -11,7 +11,7 @@ const IconShell = ({ children, link }: IconShellProps) => {
     <Link
       href={link}
       target="_blank"
-      className="w-5 lg:w-10 cursor-pointer lg:p-1 border-2 border-transparent hover:border-gray-200 rounded-xl"
+      className="w-5 lg:w-10 cursor-pointer lg:p-1 border-2 border-transparent hover:border-gray-300 rounded-xl"
     >
       {children}
     </Link>

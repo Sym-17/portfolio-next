@@ -8,8 +8,11 @@ import LinkedInIcon from "./LinkedInIcon";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import personalInfoSVG from "../../public/personal_info.svg";
 import Image from "next/image";
+import useNightTheme from "@/store/useNightTheme";
+import FolllowLinks from "./FollowLinks";
 
 const AboutMyself = () => {
+  const { nightTheme } = useNightTheme();
   return (
     <SectionLayoutOfHomePage
       id="about-myself"
@@ -25,7 +28,11 @@ const AboutMyself = () => {
           className="w-4/6 sm:w-2/5"
         />
         <div className="w-full flex flex-col gap-8 pr-5">
-          <p className="text-sm md:text-base xl:text-lg text-start">
+          <p
+            className={`text-sm md:text-base xl:text-lg text-start ${
+              nightTheme ? "text-gray-300" : "text-black"
+            }`}
+          >
             I am <span className="font-semibold">MD. Samiullah Sayem</span>. I
             am from{" "}
             <span className="font-semibold">Thakurgaon, Bangladesh</span>. I
@@ -44,19 +51,15 @@ const AboutMyself = () => {
           <h1>Download my resume</h1>
         </Link> */}
           <div className="flex items-center gap-3">
-            <p className="text-sm md:text-base xl:text-lg">Follow me on:</p>
-            <IconShell link="https://github.com/Sym-17">
-              <GithubIcon color="#000000" />
-            </IconShell>
-            <IconShell link="https://www.linkedin.com/in/md-samiullah-sayem/">
-              <LinkedInIcon color="#000000" />
-            </IconShell>
-            <IconShell link="https://leetcode.com/sayem7/">
-              <LeetcodeIcon color="#000000" />
-            </IconShell>
-            <IconShell link="mailto:sayemsami7@gmail.com">
-              <EnvelopeIcon />
-            </IconShell>
+            <p
+              className={`text-xs md:text-sm xl:text-base ${
+                nightTheme ? "text-gray-300" : "text-black"
+              }`}
+            >
+              Follow me on:
+            </p>
+
+            <FolllowLinks flexStyle="row" />
           </div>
         </div>
       </div>

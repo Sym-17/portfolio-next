@@ -5,7 +5,9 @@ import SectionLayoutOfHomePage from "./SectionShellOfHomePage";
 import Link from "next/link";
 import EachProject from "./EachProject";
 import { tree } from "next/dist/build/templates/app-page";
+import useNightTheme from "@/store/useNightTheme";
 const ProjectsForHomePage = () => {
+  const { nightTheme } = useNightTheme();
   return (
     <SectionLayoutOfHomePage id="" title="Projects" placementOfTitle="left">
       <div className="flex flex-col sm:flex-row justify-between gap-10 2xl:gap-32 items-center w-full">
@@ -29,7 +31,9 @@ const ProjectsForHomePage = () => {
             isDeployed={true}
           />
           <Link href="/projects" className="ml-auto cursor-pointer">
-            <span className="text-sm lg:text-xl font-medium">See More...</span>
+            <span className={`text-sm lg:text-xl font-medium text-[#536DFE]`}>
+              See More...
+            </span>
           </Link>
         </div>
         <Image

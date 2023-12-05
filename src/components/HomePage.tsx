@@ -6,8 +6,11 @@ import LinkedInIcon from "./LinkedInIcon";
 import GithubIcon from "./GithubIcon";
 import IconShell from "./IconShell";
 import MouseIcon from "./MouseIcon";
+import useNightTheme from "@/store/useNightTheme";
+import FolllowLinks from "./FollowLinks";
 
 const HomePage = () => {
+  const { nightTheme } = useNightTheme();
   return (
     <div className="w-full flex flex-col gap-20 min-h-screen justify-center items-center">
       <div className="flex justify-between w-full gap-5 md:gap-10 lg:gap-20">
@@ -15,10 +18,18 @@ const HomePage = () => {
           <header className="text-2xl md:text-3xl xl:text-5xl font-medium text-[#536DFE]">
             MD. Samiullah Sayem
           </header>
-          <p className="text-lg md:text-xl xl:text-2xl font-medium">
+          <p
+            className={`text-lg md:text-xl xl:text-2xl font-medium ${
+              nightTheme ? "text-gray-300" : "text-black"
+            }`}
+          >
             Software Engineer
           </p>
-          <p className="text-sm md:text-base xl:text-lg">
+          <p
+            className={`text-sm md:text-base xl:text-lg ${
+              nightTheme ? "text-gray-300" : "text-black"
+            }`}
+          >
             Recent graduate with a strong willingness to learn and to develop
             industry-level skills. I possess a proactive learning attitude and
             aspire to create to a successful career by acquiring valuable
@@ -31,19 +42,8 @@ const HomePage = () => {
             </h1>
           </Link>
         </div>
-        <div className="hidden md:flex flex-col gap-5">
-          <IconShell link="https://github.com/Sym-17">
-            <GithubIcon color="#000000" />
-          </IconShell>
-          <IconShell link="https://www.linkedin.com/in/md-samiullah-sayem/">
-            <LinkedInIcon color="#000000" />
-          </IconShell>
-          <IconShell link="https://leetcode.com/sayem7/">
-            <LeetcodeIcon color="#000000" />
-          </IconShell>
-          <IconShell link="mailto:sayemsami7@gmail.com">
-            <EnvelopeIcon />
-          </IconShell>
+        <div className="hidden md:flex">
+          <FolllowLinks flexStyle="col" />
         </div>
       </div>
       <Link

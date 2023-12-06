@@ -1,9 +1,9 @@
 import React from "react";
 
-function LinkedInIcon() {
+function LinkedInIcon({ footerOrNot }: { footerOrNot: string }) {
   return (
     <svg
-      className="fill-primary"
+      className={`${footerOrNot === "true" ? "fill-gray-300" : "fill-primary"}`}
       version="1.1"
       id="Icons"
       xmlns="http://www.w3.org/2000/svg"

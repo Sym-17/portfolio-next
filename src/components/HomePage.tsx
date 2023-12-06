@@ -13,7 +13,7 @@ const HomePage = () => {
               Hi, I{"'"}m Sayem
             </header>
           </AnimationShellOfX>
-          <AnimationShellOfX duration={1.5} delay={0.3} x="-100%">
+          <AnimationShellOfX duration={1} delay={0.3} x="-100%">
             <p
               className={`text-lg md:text-xl xl:text-2xl font-medium text-primary`}
             >
@@ -21,7 +21,7 @@ const HomePage = () => {
             </p>
           </AnimationShellOfX>
 
-          <AnimationShellOfX duration={1.5} delay={0.3} x="100%">
+          <AnimationShellOfX duration={1} delay={0.5} x="100%">
             <p
               className={`text-sm md:text-base xl:text-lg text-start text-primary`}
             >
@@ -42,7 +42,7 @@ const HomePage = () => {
               through valuable experience and professional growth.
             </p>
           </AnimationShellOfX>
-          <AnimationShellOfX duration={1.5} delay={1.5} x="-100%">
+          <AnimationShellOfX duration={0.5} delay={1} x="-100%">
             <div className="flex items-center gap-3">
               <p className={`text-xs md:text-sm xl:text-base text-primary`}>
                 Follow me on:
@@ -55,7 +55,7 @@ const HomePage = () => {
       </div>
 
       <Link href="#skills" className="flex w-fit justify-end items-end ml-auto">
-        <AnimationShellOfX duration={1.5} delay={1.5} x="100%">
+        <AnimationShellOfX duration={0.5} delay={1} x="100%">
           <div className="flex justify-center items-center gap-1 p-1 rounded-xl">
             <p className="text-[#536DFE] text-sm md:text-base xl:text-lg">
               Scroll Down

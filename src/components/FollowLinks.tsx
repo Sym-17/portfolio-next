@@ -12,7 +12,7 @@ const FolllowLinks = ({ flexStyle }: { flexStyle: string }) => {
         <GithubIcon />
       </IconShell>
       <IconShell link="https://www.linkedin.com/in/md-samiullah-sayem/">
-        <LinkedInIcon />
+        <LinkedInIcon footerOrNot="false" />
       </IconShell>
       <IconShell link="https://leetcode.com/sayem7/">
         <LeetcodeIcon />

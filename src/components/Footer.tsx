@@ -17,7 +17,7 @@ export default function Footer() {
             <EnvelopeIcon className="text-gray-300" />
           </IconShell>
           <IconShell link="https://www.linkedin.com/in/md-samiullah-sayem/">
-            <LinkedInIcon />
+            <LinkedInIcon footerOrNot="true" />
           </IconShell>
         </div>
         <p className="text-[8px] lg:text-[10px] text-center mt-3 text-gray-300">

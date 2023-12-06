@@ -21,7 +21,7 @@ export default function AnimationShell({ children }: PropsWithChildren) {
       }}
       initial="hidden"
       animate={mainControl}
-      transition={{ duration: 1, delay: 0.5 }}
+      transition={{ duration: 0.75, delay: 0.5 }}
       ref={ref}
       className="w-full"
     >

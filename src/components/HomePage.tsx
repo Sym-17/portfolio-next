@@ -10,7 +10,7 @@ const HomePage = () => {
         <div className="flex flex-col justify-start gap-2 lg:gap-5 ">
           <AnimationShellOfX duration={0.5} delay={0} x="-100%">
             <header className="text-2xl md:text-3xl xl:text-5xl font-medium text-[#536DFE]">
-              Hi, I'm Sayem
+              Hi, I{"'"}m Sayem
             </header>
           </AnimationShellOfX>
           <AnimationShellOfX duration={1.5} delay={0.3} x="-100%">
@@ -37,11 +37,9 @@ const HomePage = () => {
                 Bangladesh
               </span>{" "}
               in the year of <span className="font-semibold">2023</span>.<br />{" "}
-              Recent graduate with a strong willingness to learn and to develop
-              industry-level skills. I possess a proactive learning attitude and
-              aspire to create to a successful career by acquiring valuable
-              experience and professional growth. Committed to building a
-              rewarding career in the industry.
+              Recent graduate with a proactive learning attitude, eager to
+              develop industry-level skills and build a successful career
+              through valuable experience and professional growth.
             </p>
           </AnimationShellOfX>
           <AnimationShellOfX duration={1.5} delay={1.5} x="-100%">

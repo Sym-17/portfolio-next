@@ -1,18 +1,11 @@
 import React from "react";
 import SectionLayoutOfHomePage from "./SectionShellOfHomePage";
 import Link from "next/link";
-import IconShell from "./IconShell";
-import GithubIcon from "./GithubIcon";
-import LeetcodeIcon from "./LeetcodeIcon";
-import LinkedInIcon from "./LinkedInIcon";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import personalInfoSVG from "../../public/personal_info.svg";
 import Image from "next/image";
-import useNightTheme from "@/store/useNightTheme";
 import FolllowLinks from "./FollowLinks";
 
 const AboutMyself = () => {
-  const { nightTheme } = useNightTheme();
   return (
     <SectionLayoutOfHomePage
       id="about-myself"
@@ -28,11 +21,7 @@ const AboutMyself = () => {
           className="w-4/6 sm:w-2/5"
         />
         <div className="w-full flex flex-col gap-8 pr-5">
-          <p
-            className={`text-sm md:text-base xl:text-lg text-start ${
-              nightTheme ? "text-gray-300" : "text-black"
-            }`}
-          >
+          <p className={`text-sm md:text-base xl:text-lg text-start`}>
             I am <span className="font-semibold">MD. Samiullah Sayem</span>. I
             am from{" "}
             <span className="font-semibold">Thakurgaon, Bangladesh</span>. I
@@ -54,13 +43,7 @@ const AboutMyself = () => {
             <h1>Download my resume</h1>
           </Link>
           <div className="flex items-center gap-3">
-            <p
-              className={`text-xs md:text-sm xl:text-base ${
-                nightTheme ? "text-gray-300" : "text-black"
-              }`}
-            >
-              Follow me on:
-            </p>
+            <p className={`text-xs md:text-sm xl:text-base`}>Follow me on:</p>
 
             <FolllowLinks flexStyle="row" />
           </div>

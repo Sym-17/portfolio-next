@@ -11,11 +11,7 @@ export default function Home() {
   const { changeMenu } = useSideBar();
   const { nightTheme } = useNightTheme();
   return (
-    <main
-      className={`flex flex-col items-center w-full ${
-        nightTheme ? "bg-gray-800" : "bg-white"
-      }`}
-    >
+    <main className={`flex flex-col items-center w-full `}>
       <div
         // className="flex w-full flex-col items-center justify-between"
         className="flex w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 flex-col items-center justify-between"
@@ -26,7 +22,6 @@ export default function Home() {
         <Skills />
         <ProjectsForHomePage />
         <Experience />
-        <AboutMyself />
       </div>
     </main>
   );

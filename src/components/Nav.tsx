@@ -20,7 +20,11 @@ const navTitles: navTitle[] = [
   { title: "Skills", link: "/#skills" },
   { title: "Projects", link: "/projects" },
   { title: "Experiences", link: "/#experiences" },
-  { title: "About Myself", link: "/#about-myself" },
+  // { title: "About Myself", link: "/#about-myself" },
+  {
+    title: "My Resume",
+    link: "https://drive.google.com/file/d/1FO-tnQdKniyNUF3TojJVZomNeXyKuebJ/view",
+  },
 ];
 
 const Nav = () => {
@@ -31,18 +35,12 @@ const Nav = () => {
 
   return (
     <div
-      className={`flex flex-col justify-start items-center w-full fixed top-0`}
+      className={`flex flex-col justify-start items-center w-full fixed top-0 z-[999] bg-gradient-to-r from-slate-50 to-teal-100`}
     >
-      <div
-        className={`w-full flex items-center justify-center ${
-          nightTheme ? "bg-gray-800" : "bg-white"
-        } border-b-2`}
-      >
+      <div className={`w-full flex items-center justify-center border-b-2`}>
         <div className="flex justify-between items-center w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 pt-2 pb-2 md:pt-4 md:pb-4 xl:pt-6 xl:pb-6  border-b-gray-300">
           <Bars3BottomLeftIcon
-            className={`w-6 sm:w-8  md:hidden ${
-              nightTheme ? "text-gray-300" : "text-[#536DFE]"
-            }`}
+            className={`w-6 sm:w-8  md:hidden text-primary`}
             onClick={() => changeMenu(!showSideBar)}
           />
 
@@ -52,7 +50,12 @@ const Nav = () => {
           >
             {navTitles.map((title) => {
               return (
-                <Link href={title.link} key={title.title} scroll={true}>
+                <Link
+                  href={title.link}
+                  key={title.title}
+                  scroll={true}
+                  target={title.title === "My Resume" ? "_blank" : ""}
+                >
                   <h1
                     className={`cursor-pointer   ${
                       pathname === title.link
@@ -61,7 +64,7 @@ const Nav = () => {
                         ? "text-gray-300"
                         : "text-black"
                     }
-                    } hover:text-[#536DFE] text-sm xl:text-lg font-medium hidden md:flex`}
+                    } hover:text-[#536DFE] text-sm xl:text-lg font-medium hidden md:flex uppercase`}
                   >
                     {title.title}
                   </h1>
@@ -71,7 +74,10 @@ const Nav = () => {
             {nightTheme ? (
               <SunIcon
                 className="w-6 sm:w-8 p-1 bg-gray-100 hover:bg-slate-300 rounded-full cursor-pointer"
-                onClick={() => changeTheme(false)}
+                // onClick={() => changeTheme(false)}
+                onClick={() => {
+                  document.documentElement.setAttribute("data-theme", "light");
+                }}
               />
             ) : (
               <MoonIcon

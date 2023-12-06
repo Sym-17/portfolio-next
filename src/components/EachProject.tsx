@@ -18,7 +18,7 @@ type EachProjectProps = {
 const EachProject = (props: EachProjectProps) => {
   const { nightTheme } = useNightTheme();
   return (
-    <div className="flex justify-between gap-5 items-center w-full bg-transparent border-2 border-[#536DFE] p-2 rounded-2xl">
+    <div className="flex justify-between gap-5 items-center w-full h-full bg-transparent border-2 border-[#536DFE] p-2 rounded-2xl">
       <div className="flex flex-col items-start gap-1">
         <header
           className={`text-xl font-bold ${

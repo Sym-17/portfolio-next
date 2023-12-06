@@ -47,9 +47,12 @@ const AboutMyself = () => {
             </span>{" "}
             in the year of <span className="font-semibold">2023</span>
           </p>
-          {/* <Link href="/Resume_of_Samiullah_Sayem.pdf">
-          <h1>Download my resume</h1>
-        </Link> */}
+          <Link
+            href="https://drive.google.com/file/d/1FO-tnQdKniyNUF3TojJVZomNeXyKuebJ/view"
+            target="_blank"
+          >
+            <h1>Download my resume</h1>
+          </Link>
           <div className="flex items-center gap-3">
             <p
               className={`text-xs md:text-sm xl:text-base ${

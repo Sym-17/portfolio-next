@@ -35,7 +35,8 @@ export default function RootLayout({
       className="scroll-smooth scroll-pt-14 md:scroll-pt-20 xl:scroll-pt-28"
     >
       <body
-        className={`${montserrat.className} flex flex-col justify-center items-center bg-gradient-to-r from-slate-50 to-teal-100`}
+        className={`${montserrat.className} flex flex-col w-full justify-center items-center bg-gradient `}
+        // bg-gradient-to-r from-slate-50 to-teal-100
       >
         <Nav />
 

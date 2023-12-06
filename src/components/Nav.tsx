@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   MoonIcon,
   Bars3BottomLeftIcon,
@@ -8,7 +8,6 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import useSideBar from "@/store/useSideBar";
-import useNightTheme from "@/store/useNightTheme";
 
 type navTitle = {
   title: string;
@@ -30,17 +29,31 @@ const navTitles: navTitle[] = [
 const Nav = () => {
   const pathname = usePathname();
 
-  const { nightTheme, changeTheme } = useNightTheme();
+  const [nightTheme, setNightTheme] = useState<Boolean>(false);
   const { showSideBar, changeMenu } = useSideBar();
+
+  useEffect(() => {
+    const nightVal = localStorage.getItem("nightMode");
+
+    if (nightVal === "true") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      setNightTheme(true);
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      setNightTheme(false);
+    }
+  }, []);
 
   return (
     <div
-      className={`flex flex-col justify-start items-center w-full fixed top-0 z-[999] bg-gradient-to-r from-slate-50 to-teal-100`}
+      className={`flex flex-col justify-start items-center w-full fixed top-0 z-[999]`}
     >
-      <div className={`w-full flex items-center justify-center border-b-2`}>
-        <div className="flex justify-between items-center w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 pt-2 pb-2 md:pt-4 md:pb-4 xl:pt-6 xl:pb-6  border-b-gray-300">
+      <div
+        className={`w-full flex items-center justify-center border-b-2 border-b-gray-300 bg-gradient`}
+      >
+        <div className="flex justify-between items-center w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 pt-2 pb-2 md:pt-4 md:pb-4 xl:pt-6 xl:pb-6">
           <Bars3BottomLeftIcon
-            className={`w-6 sm:w-8  md:hidden text-primary`}
+            className={`w-6 sm:w-8  md:hidden text-[#536DFE]`}
             onClick={() => changeMenu(!showSideBar)}
           />
 
@@ -60,9 +73,7 @@ const Nav = () => {
                     className={`cursor-pointer   ${
                       pathname === title.link
                         ? "text-[#536DFE]"
-                        : nightTheme
-                        ? "text-gray-300"
-                        : "text-black"
+                        : "text-primary"
                     }
                     } hover:text-[#536DFE] text-sm xl:text-lg font-medium hidden md:flex uppercase`}
                   >
@@ -74,15 +85,20 @@ const Nav = () => {
             {nightTheme ? (
               <SunIcon
                 className="w-6 sm:w-8 p-1 bg-gray-100 hover:bg-slate-300 rounded-full cursor-pointer"
-                // onClick={() => changeTheme(false)}
                 onClick={() => {
                   document.documentElement.setAttribute("data-theme", "light");
+                  setNightTheme(false);
+                  localStorage.setItem("nightMode", "false");
                 }}
               />
             ) : (
               <MoonIcon
                 className="w-6 sm:w-8 p-1 bg-gray-100 hover:bg-slate-300 rounded-full cursor-pointer"
-                onClick={() => changeTheme(true)}
+                onClick={() => {
+                  document.documentElement.setAttribute("data-theme", "dark");
+                  setNightTheme(true);
+                  localStorage.setItem("nightMode", "true");
+                }}
               />
             )}
           </div>
@@ -90,15 +106,20 @@ const Nav = () => {
       </div>
       {/* For Side Bar */}
       {showSideBar ? (
-        <div className="flex items-start w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2 h-full md:hidden bg-transparent">
-          <div className="flex flex-col w-2/5 md:hidden bg-gray-200 p-2 items-start gap-2 rounded-b-xl">
+        <div className="w-5/6 sm:w-2/3 md:w-7/12 xl:w-1/2">
+          <div className="flex flex-col p-2 items-start bg-gray-200 w-fit mr-auto md:hidden gap-2 rounded-b-xl">
             {navTitles.map((title) => {
               return (
-                <Link href={title.link} key={title.title} scroll={true}>
+                <Link
+                  href={title.link}
+                  key={title.title}
+                  scroll={true}
+                  target={title.title === "My Resume" ? "_blank" : ""}
+                >
                   <h1
                     className={`cursor-pointer  ${
-                      pathname === title.link ? "text-[#536DFE] " : ""
-                    } hover:text-[#4f62ce] text-[10px] sm:text-sm font-medium`}
+                      pathname === title.link ? "text-[#536DFE] " : "text-black"
+                    } hover:text-[#4f62ce] text-[10px] sm:text-xs font-medium`}
                     onClick={() => changeMenu(false)}
                   >
                     {title.title}

@@ -1,13 +1,9 @@
 import React from "react";
 
-type props = {
-  color: string;
-};
-
-function LinkedInIcon({ color }: props) {
+function LinkedInIcon() {
   return (
     <svg
-      fill={color}
+      className="fill-primary"
       version="1.1"
       id="Icons"
       xmlns="http://www.w3.org/2000/svg"

@@ -12,6 +12,7 @@ const config: Config = {
         primary: "rgb(var(--text-color) / <alpha-value>)",
       },
       backgroundImage: {
+        gradient: "var(--bg-image)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

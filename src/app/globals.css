@@ -4,9 +4,16 @@
 
 @layer base {
     :root{
-        --text-color: 203 213 225
+        --text-color: 0 0 0;
+        --bg-image: linear-gradient(to right, rgb(248 250 252), rgb(204, 251, 241));
     }
     :root[data-theme="light"]{
-        --text-color: 83 109 254
+        --text-color: 0 0 0;
+        --bg-image: linear-gradient(to right, rgb(248 250 252), rgb(204, 251, 241));
+    }
+    :root[data-theme="dark"]{
+        --text-color: 203 213 225;
+        /* --bg-image: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99)); */
+        --bg-image: linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));
     }
 }

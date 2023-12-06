@@ -1,13 +1,11 @@
 import Link from "next/link";
 import MouseIcon from "./MouseIcon";
-import useNightTheme from "@/store/useNightTheme";
 import FolllowLinks from "./FollowLinks";
 import AnimationShellOfX from "./AnimationShellOfX";
 
 const HomePage = () => {
-  const { nightTheme } = useNightTheme();
   return (
-    <div className="w-full flex flex-col gap-20 min-h-screen justify-center items-center">
+    <div className="w-full flex flex-col gap-10 md:gap-16 xl:gap-20 min-h-screen justify-center items-center">
       <div className="flex justify-between w-full gap-5 md:gap-10 lg:gap-20">
         <div className="flex flex-col justify-start gap-2 lg:gap-5 ">
           <AnimationShellOfX duration={0.5} delay={0} x="-100%">
@@ -17,9 +15,7 @@ const HomePage = () => {
           </AnimationShellOfX>
           <AnimationShellOfX duration={1.5} delay={0.3} x="-100%">
             <p
-              className={`text-lg md:text-xl xl:text-2xl font-medium ${
-                nightTheme ? "text-gray-300" : "text-black"
-              }`}
+              className={`text-lg md:text-xl xl:text-2xl font-medium text-primary`}
             >
               Software Engineer
             </p>
@@ -27,13 +23,11 @@ const HomePage = () => {
 
           <AnimationShellOfX duration={1.5} delay={0.3} x="100%">
             <p
-              className={`text-sm md:text-base xl:text-lg text-start ${
-                nightTheme ? "text-gray-300" : "text-black"
-              }`}
+              className={`text-sm md:text-base xl:text-lg text-start text-primary`}
             >
-              I'm from{" "}
-              <span className="font-semibold">Thakurgaon, Bangladesh</span>.
-              I've completed my{" "}
+              I{"'"}m from{" "}
+              <span className="font-semibold">Thakurgaon, Bangladesh</span>. I
+              {"'"}ve completed my{" "}
               <span className="font-semibold">
                 BSc in Computer Science and Engineering
               </span>{" "}
@@ -52,28 +46,19 @@ const HomePage = () => {
           </AnimationShellOfX>
           <AnimationShellOfX duration={1.5} delay={1.5} x="-100%">
             <div className="flex items-center gap-3">
-              <p
-                className={`text-xs md:text-sm xl:text-base ${
-                  nightTheme ? "text-gray-300" : "text-black"
-                }`}
-              >
+              <p className={`text-xs md:text-sm xl:text-base text-primary`}>
                 Follow me on:
               </p>
 
-              <FolllowLinks flexStyle="row" />
+              <FolllowLinks flexStyle="flex-row" />
             </div>
           </AnimationShellOfX>
-          {/* <Link href="#about-myself" className="w-28  md:w-32  xl:w-40">
-            <h1 className=" p-1 md:p-2 lg:p-3 xl:p-4 text-white bg-[#536DFE] hover:bg-[#4f62ce] text-sm  lg:text-base xl:text-lg font-medium text-center rounded-xl cursor-pointer">
-              Get in touch
-            </h1>
-          </Link> */}
         </div>
       </div>
 
-      <Link href="#skills" className="flex w-full justify-end items-end">
+      <Link href="#skills" className="flex w-fit justify-end items-end ml-auto">
         <AnimationShellOfX duration={1.5} delay={1.5} x="100%">
-          <div className="flex justify-center items-center ml-auto gap-1 p-1 rounded-xl">
+          <div className="flex justify-center items-center gap-1 p-1 rounded-xl">
             <p className="text-[#536DFE] text-sm md:text-base xl:text-lg">
               Scroll Down
             </p>
